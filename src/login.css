@@ -1,0 +1,73 @@
+.heading
+{
+    margin-bottom: 60px;
+}
+
+/*
+html{
+background:#333;
+
+color:whitesmoke
+}
+*/
+
+h1{
+    font-size: 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+}
+/*
+body{
+min-height: 100vh;
+font-size: 1.5rem;
+}
+
+<div className="flex flex-col items-center bg-white p-4 border border-gray mb-5 rounded">
+
+
+<div className="container flex mx-auto max-w-screen-md items-center h-screen">
+*/
+label{
+font-size: 1.5rem;
+}
+
+input{
+    line-height: 1.6rem;
+    
+    width:260px;
+}
+
+.container{
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+height: 100vh; 
+}
+
+.formdiv
+{
+display: flex;
+align-items: center;
+justify-content: center;
+background: green;
+height:60%;
+width: 30%;
+}
+
+
+form{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+button{
+margin-top: 60px;
+font-size: 1.5rem;
+background:#231280;
+font-style: normal;
+color: white;
+width: 4em;
+}
