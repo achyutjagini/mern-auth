@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React from 'react'
 import "./dashboard.css"
@@ -14,11 +13,17 @@ const Dashboard = () => {
                 <img src={logo} alt="logo" />
                 <Router>
                     <Routes>
-                        <Route path="/sign" element={SignUp}></Route>
+                        <Route path="/" element={Login}></Route>
+                        <Link ></Link>
+
+
+
+
+
+
 
                     </Routes>
                 </Router>
-
             </div>
         </div>
     )
