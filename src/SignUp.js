@@ -12,14 +12,16 @@ const SignUp = () => {
 
                 <form>
                     <div className='heading'>
-                        <h1>Sign up</h1>
+                        <h1>Sign Up</h1>
                     </div>
-                    <label>Enter Username</label>
-                    <input type='text' onChange={(e) => setUsername(e.target.value)}></input>
+                    {/* <label>Username</label> */}
+                    <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value)}></input>
                     <br></br>
-                    <label>Enter password</label>
-                    <input type='text' onChange={(e) => setPassword(e.target.value)}></input>
-                    <button >Sign up</button>
+                    {/*     <label>Password</label> */}
+                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
+                    <button>Sign Up</button>
+
+
                 </form>
             </div>
         </div>

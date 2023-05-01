@@ -13,14 +13,17 @@ const Login = () => {
 
                 <form>
                     <div className='heading'>
-                        <h1>Login</h1>
+                        <h1>Log in</h1>
                     </div>
-                    <label>Enter Username</label>
-                    <input type='text' onChange={(e) => setUsername(e.target.value)}></input>
+                    {/* <label>Username</label> */}
+                    <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value)}></input>
                     <br></br>
-                    <label>Enter password</label>
-                    <input type='password' onChange={(e) => setPassword(e.target.value)}></input>
-                    <button>login</button>
+                    {/*     <label>Password</label> */}
+                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
+                    <button>Log in</button>
+
+                    <p>Not a member yet? Sign Up</p>
+
                 </form>
             </div>
         </div>
