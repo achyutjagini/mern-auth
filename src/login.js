@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './login.css'
-
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
 const Login = () => {
     const [username, setUsername] = useState('')
@@ -22,7 +22,7 @@ const Login = () => {
                     <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
                     <button>Log in</button>
 
-                    <p>Not a member yet? Sign Up</p>
+                    <p>Not a member yet? <Link to="/sign-up" class="link">Sign Up</Link></p>
 
                 </form>
             </div>
