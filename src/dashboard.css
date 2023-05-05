@@ -1,3 +1,4 @@
+/*
 .container{
     display: flex; 
     flex-direction: column;
@@ -5,7 +6,7 @@
     align-items: center; 
     height: 100vh; 
     }
-/* 
+ 
 .main-div
 {
     display: flex;
@@ -15,11 +16,12 @@
     height:60%;
     width: 30%;
 }
-*/
+
 
 img{
     height:80%;
     width: 80%;
 }
+*/
 
     

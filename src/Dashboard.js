@@ -1,31 +1,27 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React from 'react'
-import "./dashboard.css"
 import logo from "./images/logo.png"
 import Login from "./login";
 import SignUp from "./SignUp";
+import NavBar from "./NavBar";
+import "./login.css"
 
-const Dashboard = () => {
-    return (
+/*
 
         <div className='container'>
             <div className='main-div'>
                 <img src={logo} alt="logo" />
-                <Router>
-                    <Routes>
-                        <Route path="/" element={Login}></Route>
-                        <Link ></Link>
 
-
-
-
-
-
-
-                    </Routes>
-                </Router>
             </div>
         </div>
+*/
+const Dashboard = () => {
+
+
+    return (<>
+        <NavBar />
+
+    </>
     )
 }
 
