@@ -3,6 +3,9 @@ html{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif sans-serif;
 }
 
+h1{
+font-size: 10rem;    
+}
 
 .link_login{
 font-style: normal;
