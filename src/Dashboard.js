@@ -1,8 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React from 'react'
-import logo from "./images/logo.png"
-import Login from "./login";
-import SignUp from "./SignUp";
 import NavBar from "./NavBar";
 
 /*
