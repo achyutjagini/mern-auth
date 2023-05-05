@@ -4,7 +4,6 @@ import logo from "./images/logo.png"
 import Login from "./login";
 import SignUp from "./SignUp";
 import NavBar from "./NavBar";
-import "./login.css"
 
 /*
 

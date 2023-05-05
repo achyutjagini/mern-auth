@@ -12,15 +12,16 @@ const SignUp = () => {
 
                 <form>
                     <div className='heading'>
-                        <h1>Sign Up</h1>
+                        <h1 class="login_h1">Sign Up</h1>
                     </div>
                     {/* <label>Username</label> */}
-                    <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value)}></input>
+                    <input class="login_input" type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value)}></input>
                     <br></br>
                     {/*     <label>Password</label> */}
-                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
-                    <button>Sign Up</button>
-                    <p>Already have an account?<Link to="/login" class="link"> Log in</Link></p>
+                    <input class="login_input" type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
+
+                    <button class="login_button">Sign Up</button>
+                    <p class="p_login">Already have an account?<Link to="/login" class="link_login"> Log in</Link></p>
 
                 </form>
             </div>

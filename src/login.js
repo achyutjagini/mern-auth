@@ -13,16 +13,16 @@ const Login = () => {
 
                 <form>
                     <div className='heading'>
-                        <h1>Log in</h1>
+                        <h1 class="login_h1">Log in</h1>
                     </div>
                     {/* <label>Username</label> */}
-                    <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value)}></input>
+                    <input class="login_input" type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value)}></input>
                     <br></br>
                     {/*     <label>Password</label> */}
-                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
-                    <button>Log in</button>
+                    <input class="login_input" type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
+                    <button class="login_button">Log in</button>
 
-                    <p>Not a member yet? <Link to="/sign-up" class="link">Sign Up</Link></p>
+                    <p class="p_login">Not a member yet? <Link to="/sign-up" class="link_login">Sign Up</Link></p>
 
                 </form>
             </div>

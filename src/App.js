@@ -5,7 +5,7 @@ import SignUp from './SignUp';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Routes>
 
