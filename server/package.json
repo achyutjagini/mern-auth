@@ -11,8 +11,10 @@
     "body-parser": "^1.19.0",
     "brcypt": "^1.0.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.16.4",
     "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.4.0",
     "mongoose": "^5.7.5",
     "nodemon": "^2.0.20"
   }
