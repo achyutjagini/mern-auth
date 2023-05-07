@@ -1,27 +1,28 @@
 import React, { useState } from 'react'
 import './login.css'
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import api from '../api/index'
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+
+    const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    async function registerUser(e) {
-        e.preventDefault()
-        const response = await fetch("http://localhost:1300/api/register", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                username,
-                password,
-            })
-        })
-        const data = await response.json()
-        console.log(data)
+    const registerUser = async () => {
+        const name = username
+        const password = password
+        const payload = { name, password }
 
+        await api.signup(payload).then(res => {
+            window.alert(`signup successfull`)
+            navigate('/login')
+        }).catch(err =>
+            console.log(err)
+        )
     }
+
     return (
         <div className='container'>
             <div className='formdiv'>
