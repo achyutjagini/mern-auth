@@ -4,6 +4,13 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config({ path: '.env' });
 
+//http://localhost:8000/api/signup
+//http://localhost:8000/api/signin
+
+//import routes
+const authRoutes = require('./routes/auth');
+const { db } = require('./models/User');
+
 //console.log(process.env.DATABASE)
 /*
 mongoose.connect() is an asynchronous method that returns a promise. When you call
@@ -28,12 +35,9 @@ app.get('/hello', (req, res) => {
   res.send("hello world")
 })
 
-app.post("/api/register", (req, res) => {
-  console.log(req.body)
-  res.json({ status: ok })
-})
+app.use('/api', authRoutes);
 
-const port = 1300
+const port = 8000
 app.listen(port, () => {
   console.log(`server started on ${port}`)
 })
