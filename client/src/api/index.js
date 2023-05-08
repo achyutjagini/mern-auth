@@ -9,7 +9,7 @@ export const signup = payload => api.post(`/signup`, payload, {
         'Content-Type': 'application/json'
     }
 })
-export const signin = payload => api.post(`/signin`, JSON.stringify(payload), {
+export const signin = payload => api.post(`/signin`, payload, {
     headers: {
         'Content-Type': 'application/json'
     }
