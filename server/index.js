@@ -30,6 +30,7 @@ mongoose.connect(process.env.DATABASE, {
 const cors = require('cors')
 app.use(cors())
 app.use(bodyParser.json());
+//app.use(express.json())
 
 app.get('/hello', (req, res) => {
   res.send("hello world")

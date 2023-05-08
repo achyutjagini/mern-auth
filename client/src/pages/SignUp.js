@@ -10,18 +10,25 @@ const SignUp = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    const registerUser = async () => {
+    const registerUser = async (e) => {
+        e.preventDefault()
         const name = username
-        const password = password
+        const pass = password
         const payload = { name, password }
+        console.log(JSON.stringify(payload))
 
-        await api.signup(payload).then(res => {
+        await api.signup(JSON.stringify(payload), {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => {
             window.alert(`signup successfull`)
             navigate('/login')
         }).catch(err =>
             console.log(err)
         )
     }
+
 
     return (
         <div className='container'>
