@@ -5,14 +5,13 @@ const NavBar = () => {
     return (
         <>
             <nav>
-                <h1>Logo</h1>
+                <h1>MERN app</h1>
                 <div class="menu">
 
                     <Link class="link" to="/about"><p>About</p></Link>
                     <Link class="link" to="/services"><p>Services</p></Link>
                     <Link class="link" to="/contact"><p>Contact Us</p></Link>
                     <Link class="link" to="/sign-up"><p>Sign up</p></Link>
-
                 </div>
                 <Link class="link" to="/login">
                     <button>Sign in</button>
