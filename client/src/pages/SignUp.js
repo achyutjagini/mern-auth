@@ -9,6 +9,7 @@ const SignUp = () => {
     const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
 
     const registerUser = async (e) => {
         e.preventDefault()
@@ -24,8 +25,10 @@ const SignUp = () => {
         }).then(res => {
             window.alert(`signup successfull`)
             navigate('/login')
-        }).catch(err =>
+        }).catch(err => {
             console.log(err)
+            setError('User already exists')
+        }
         )
     }
 
@@ -43,7 +46,7 @@ const SignUp = () => {
                     <br></br>
                     {/*     <label>Password</label> */}
                     <input class="login_input" type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
-
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
                     <button class="login_button" onClick={registerUser}>Sign Up</button>
                     <p class="p_login">Already have an account?<Link to="/login" class="link_login"> Log in</Link></p>
 
