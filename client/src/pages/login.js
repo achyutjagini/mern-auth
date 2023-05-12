@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './login.css'
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import api from '../api/index'
@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify'; // import toast object
 import 'react-toastify/dist/ReactToastify.css';
 import './popup.css';
-
+import { AuthContext } from '../context/AuthContext';
 
 
 const Login = () => {
@@ -17,6 +17,7 @@ const Login = () => {
     const [error, setError] = useState('')
     const [showPopup, setShowPopup] = useState(false)
 
+    const { user, login, logout } = useContext(AuthContext);
 
     const loginUser = async (e) => {
         e.preventDefault()
@@ -31,6 +32,8 @@ const Login = () => {
             }
         }).then(res => {
             // setShowPopup(true)
+            login({ username: name })
+
             toast.success('Login successful!', {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: 500,
@@ -73,7 +76,7 @@ const Login = () => {
                     <button class="login_button" onClick={loginUser} >Log in</button>
 
                     <p class="p_login">Not a member yet? <Link to="/sign-up" class="link_login">Sign Up</Link></p>
-
+                    {/*   <p>Current user: {user ? user.username : 'None'}</p> */}
 
                 </form >
             </div >

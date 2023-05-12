@@ -1,7 +1,11 @@
 import "./navbar.css"
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import React, { useState, useEffect, useContext } from 'react'
+import { AuthContext } from '../context/AuthContext';
 
 const NavBar = () => {
+
+    const { user, login, logout } = useContext(AuthContext);
     return (
         <>
             <nav>
@@ -14,7 +18,7 @@ const NavBar = () => {
                     {/*   <Link class="link" to="/sign-up"><p>Sign up</p></Link> */}
                 </div>
                 <Link class="link" to="/login">
-                    <button>Sign out</button>
+                    <button onClick={() => { logout() }} >Sign out</button>
                 </Link>
 
             </nav>

@@ -1,6 +1,9 @@
 import React, { useState, createContext } from 'react';
 
 export const AuthContext = createContext();
+//AuthProvider is put around the whole <App/> in index.js
+
+//Authcontext imported in other components that need to access user state
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
