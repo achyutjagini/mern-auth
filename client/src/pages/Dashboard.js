@@ -14,7 +14,6 @@ import { useContext } from "react";
 */
 const Dashboard = () => {
     const { user, login, logout } = useContext(AuthContext);
-
     return (<>
         <NavBar />
         <div>
@@ -23,5 +22,4 @@ const Dashboard = () => {
     </>
     )
 }
-
 export default Dashboard
