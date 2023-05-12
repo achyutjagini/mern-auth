@@ -1,0 +1,30 @@
+.popup-overlay {
+    background:green;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .popup-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .toast-container {
+    width: 300px;
+  }
+/*  
+  .toast-success {
+    background-color: green;
+    color:white;
+  }*/
+  

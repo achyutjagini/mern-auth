@@ -3,6 +3,9 @@ import './login.css'
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import api from '../api/index'
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify'; // import toast object
+import 'react-toastify/dist/ReactToastify.css';
+import './popup.css';
 
 const SignUp = () => {
 
@@ -10,6 +13,7 @@ const SignUp = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+    const [showPopup, setShowPopup] = useState(false)
 
     const registerUser = async (e) => {
         e.preventDefault()
@@ -23,7 +27,13 @@ const SignUp = () => {
                 'Content-Type': 'application/json'
             }
         }).then(res => {
-            window.alert(`signup successfull`)
+            toast.success('Signup successful!', {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: 500,
+                hideProgressBar: true,
+                closeButton: false,
+                className: 'toast-success',
+            });
             navigate('/login')
         }).catch(err => {
             console.log(err)

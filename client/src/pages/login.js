@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './login.css'
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import api from '../api/index'
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify'; // import toast object
+import 'react-toastify/dist/ReactToastify.css';
+import './popup.css';
+
+
 
 const Login = () => {
 
@@ -10,10 +15,8 @@ const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+    const [showPopup, setShowPopup] = useState(false)
 
-    const add_elem = () => {
-
-    }
 
     const loginUser = async (e) => {
         e.preventDefault()
@@ -27,8 +30,16 @@ const Login = () => {
                 'Content-Type': 'application/json'
             }
         }).then(res => {
-            window.alert(`login successfull`)
+            // setShowPopup(true)
+            toast.success('Login successful!', {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: 500,
+                hideProgressBar: true,
+                closeButton: false,
+                className: 'toast-success',
+            });
             navigate('/dashboard')
+
         }).catch(err => {
             setError('Invalid username or password')
             console.log(err)
@@ -37,13 +48,18 @@ const Login = () => {
     }
 
 
-
-
     return (
         <div className='container'>
             <div className='formdiv'>
 
                 <form>
+                    <ToastContainer
+                        autoClose={500}
+                        hideProgressBar={true}
+                        closeButton={false}
+                        className="toast-container"
+                    />
+
                     <div className='heading'>
                         <h1 class="login_h1">Log in</h1>
                     </div>
@@ -59,9 +75,9 @@ const Login = () => {
                     <p class="p_login">Not a member yet? <Link to="/sign-up" class="link_login">Sign Up</Link></p>
 
 
-                </form>
-            </div>
-        </div>
+                </form >
+            </div >
+        </div >
 
     )
 }
